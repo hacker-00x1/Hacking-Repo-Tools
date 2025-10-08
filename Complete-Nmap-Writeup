@@ -1,0 +1,209 @@
+[+] Scanning an IP:
+Syntax: nmap [Target-IP]
+
+[+] Scanning a Host:
+Syntax: nmap google.com
+
+[+] Scanning a range of IPs:
+Syntax: nmap 142.250.185.14-1000 (google's IP)
+
+[+] Scanning a Subnet:
+Syntax: 192.168.129.1/24
+
+[+] Scanning a Target from a Text File:
+Syntax: nmap -iL List.txt
+
+[+] Scannin Target and Ignore Discovery:
+Syntax: nmap -Pn 142.250.185.14
+
+[+] Scanning Target and Host Discovery:
+Syntax: nmap -sP 142.250.185.14
+
+[+] Scan a Single Port:
+Syntax: nmap 142.250.185.14 -p 22
+
+[+] Scan a range of ports:
+Syntax: nmap 142.250.185.14 -p 100-900
+
+[+] Scan all ports:
+Syntax: nmap 142.250.185.14 -p-
+
+[+] Scan TCP or UDP Ports:
+Syntax: nmap -sT 142.250.185.14
+Syntax: nmap -sU 142.250.185.14
+
+[+] Fast Port Scan:
+Syntax: nmap 142.250.185.14 -F -v
+
+[+] No Randomize Port Scan:
+Syntax: nmap 142.250.185.14 -r -v
+
+[+] Nmap Top Ports Scan:
+Syntax: nmap 142.250.185.14 <-top-ports> N -v
+
+[+] Nmap Port radio Scan:
+Syntax: nmap 142.250.185.14 <-port-ratio> -v
+
+[+] Port-knocking an obfuscation as security technique:
+Syntax: for i in 1-10000;do nmap -Pn -p $i 142.250.185.14;done
+
+[+] Standard Service Detection:
+Syntax: nmap -sV 142.250.185.14
+
+[+] Light service Detection:
+Syntax: nmap -sV 142.250.185.14 <-version-intensity> 0
+
+[+] Aggressive service detection:
+Syntax: nmap -sV 142.250.185.14 <-version-intensity> 5
+
+[+] OS Detection:
+Syntax: nmap -O 142.250.185.14
+Syntax: nmap 142.250.185.14 <-max-os-tries> 
+Syntax: nmap 142.250.185.14 <-osscan-limit>
+Syntax: nmap 142.250.185.14 <-osscan-guess-fuzzy>
+Syntax: nmap 142.250.185.14 --script=smb-os-discovery
+
+[+] Save Normal output to File:
+Syntax: nmap 142.250.185.14 -oN file.txt
+
+[+] Save XML output to File:
+Syntax: nmap 142.250.185.14 -oX file.txt
+
+[+] Save XML output to CSV for Recon:
+Syntax: nmap 142.250.185.14 -oX file.txt
+python parsey.py op.xml op.csv
+
+[+] Save "Grep" Output to File:
+Syntax: nmap 142.250.185.14 -oG file.txt
+
+[+] Script k1dd3 output to File:
+Syntax: nmap 142.250.185.14 -oS file.txt
+
+[+] Save All Types Output to File:
+Syntax: nmap 142.250.185.14 -sC
+
+[+] Getting Help for any Script:
+Syntax: nmap 142.250.185.14 <--script -help => scriptname>
+
+[+] Nmap Script Args:
+Syntax: nmap 142.250.185.14 <--script=scriptname --scriptargs>
+
+[+] Scan using Specific Script:
+Syntax: nmap 142.250.185.14 <--script=script name .nse>
+
+[+] Scan using set of Scripts:
+Syntax: nmap 142.250.185.14 <--scrript="http-*">
+
+[+] Update Script Database:
+Syntax: nmap 142.250.185.14 <--script=uupdatedb>
+
+[+] Safe Scripts:
+Syntax: nmap 142.250.185.14 <--script=safe,default>
+
+[+] Vulnerability Scripts:
+Syntax: nmap 142.250.185.14 <--script=vuln>
+
+[+] DoS Script:
+Syntax: nmap 142.250.185.14 <--script=dos>
+
+[+] Exploit Scripts:
+Syntax: nmap 142.250.185.14 <--script=exploit>
+
+[+] Malware Scripts:
+Syntax: nmap 142.250.185.14 <--script=http-malware-host>
+
+[+] Introsive Scripts:
+Syntax: nmap 142.250.185.14 <--script=introsive>
+
+[+] Not including Script:
+Syntax: nmap 142.250.185.14 <--script=not script type>
+
+[+] Boolean Expression Scan:
+Syntax: nmap 142.250.185.14 <--script=and or not script type>
+
+[+] Trace route Scan:
+Syntax: nmap 142.250.185.14 --traceroute
+
+[+] Trace Traffic and Geo Resolution Scan:
+Syntax: nmap 142.250.185.14 <--scrpt=traceroute-geolocation>
+
+[+] DNS Bruteforce Scan:
+Syntax: nmap 142.250.185.14 --script=dns-brute.nse
+
+[+] Find Host on IP Scan:
+Syntax: nmap 142.250.185.14 --script=hostmap-bfk.nse
+
+[+] Whois Scan:
+Syntax: nmap 142.250.185.14 <--script=whois-ip, whois-domain>
+
+[+] Robots Scan:
+Syntax: nmap 142.250.185.14 <--script=http-robots.txt>
+
+[+] WAF Detect Scan:
+Syyntax: nmap 142.250.185.14 <--script=http-waf.detect>
+
+[+] WAF Fingerprint Scan:
+Syntax: nmap 142.250.185.14 <--script=http-waf-fingerprint>
+
+[+] Waf00f VS Nmap Scan:
+Syntax: waf00f google.com
+Syntax: nmap 142.250.185.14 <--script=http-waf-fingerprint>
+
+[+] Firewall Scan:
+Syntax: nmap 142.250.185.14 <--script= firewall --traceroute>
+
+[+] Shodan Scan:
+Syntax: nmmap 142.250.185.14 <--script=shodan-api>
+
+[+] Email Enumeration:
+Syntax: nmap 142.250.185.14 <--script=http-grep>
+
+[+] Nmap Crawlers Scan:
+Syntax: nmap 142.250.185.14 <--script=http-useragent-teter>
+
+[+] Nmap Discovering Directory Scan:
+Syntax: nmap 142.250.185.14 <--script=http-enum>
+
+[+] Nmap Relay Scan:
+Syntax: nmap 142.250.185.14 <--script=smtp-open-relay>
+
+[+] Nmap SMTP User Enum Scan:
+Syntax: nmap 142.250.185.14 <--script=smtp-enum-user>
+
+[+] Nmap SMTP Backdoor Detect Scan:
+Syntax: nmap 142.250.185.14 <--script=smtp-strangeport>
+
+[+] Nmap SMTP Password Attack Scan:
+Syntax: nmap 142.250.185.14 <--script=smtp-brute>
+
+[+] Nmap POP3 Capabilities Scan:
+Syntax: nmap 142.250.185.14 <--script=pop3-capabilities>
+
+[+] Nmap IMAP Capabilities Scan:
+Syntax: nmap 142.250.185.14 <--script=imap-capabilities>
+
+[+] Nmap Clock Scan with Decoy:
+Syntax: nmap 142.250.185.14 -D
+
+[+] Nmap Spoof Mac Address:
+Syntax: nmap 142.250.185.14 --spoof-mac
+
+[+] Nmap Select Interface:
+Syntax: nmap 142.250.185.14 -e eth0
+
+[+] Nmap Source Port Modify:
+Syntax: nmap 142.250.185.14 --source-port 7890
+
+[+] Nmap Fake TTl:
+Syntax: nmap 142.250.185.14 <--proxies proxy:port>
+
+[+] Nmap Bogus TCP / UDP Checksum:
+Syntax: nmap 142.250.185.14 < --badsum >
+
+[+] Nmap Bigus Fragment Scan: 
+Syntax: nmap 142.250.185.14 -f
+
+[+] Nmap NTU Scan:
+Syntax: nmap 142.250.185.14 -ntu 8
+
+
