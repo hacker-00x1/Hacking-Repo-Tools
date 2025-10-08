@@ -1,0 +1,34 @@
+firewalld is a firewall management tool used in many Linux distributions, particularly Red Hat-based systems like:
+RHEL (Red Hat Enterprise Linux)
+CentOS
+Fedora
+Rocky Linux
+AlmaLinux
+
+It provides a dynamic way to manage firewall rules without restarting the firewall service, and it supports zones, services, and rich rules for granular control.
+
+🔥 What Firewalld Does:
+
+Controls access to network services. 
+Blocks or allows traffic based on rules.
+Uses zones to define trust levels for network connections.
+Can be configured permanent or runtime (temporary).
+
+[+] Installation:
+# sudo apt install firewalld 
+# sudo firewall-cmd --state 
+
+# sudo firewall-cmd --permanent --add-port=80/tcp
+# sudo firewall-cmd --permanent --add-port=443/tcp
+
+# sudo firewall-cmd --reload
+# sudo firewall-cmd --list-services
+
+# sudo firewall-cmd --permanent --add-port=53/udp
+# sudo firewalld -h
+
+# sudo firewalld --permanent --add-port=80/tcp
+# sudo firewalld-cmd --list-services
+
+# sudo firewalld-cmd --zone=public --add-rich-rule='rule family ="ipv4" source address="IP" drop'
+# sudo firewall-cmd --set-zone=home
