@@ -1,0 +1,39 @@
+Nftables is the modern Linux firewall framework that replaces the older iptables, ip6tables, arptables, and ebtables systems.
+It was introduced to make packet filtering and firewall management simpler, faster, and more efficient, using a unified tool: nft.
+
+[+] Installation:
+# sudo apt install nftables
+# sudo systemctl start nftables
+
+[+] How To Use Nftables:
+# nft add rule inet traffic --filter input tcp dport {22, 80, 443} accept
+# nft add rule ip filter input ip protocol vmap {tcp, jump tcp chain, udp:jump udp.chain, icmp:jump icmp-chain} 
+
+[+] Translating IPtables to Nftables:
+# iptables-translate 
+# iptables-saave > iptables.dump
+# iptables-restore-translate -f iptables.dump
+
+[+] Create Table:
+# sudo nft add table inet first-table
+# sudo nft list tables
+# sudo nft delete tables inet first-table
+
+[+] Chains:
+# nft add chain ip traffic-filter output { type filter hook output priority 0 \; policy accept\; }
+
+[+] Basic Rules: 
+# nft add rule ip filter output ip addr 1.2.3.4 drop
+
+[+] Adding Rules:
+# nft add rule ip filter ip addr [IP]/24 counter
+# nft add rule ip filter input tcp dport 80 drop
+# nft add rule filter input icmp type echo-request accept
+# nft delete rule filter output
+
+# sudo iptables-translate -A INPUT -s [IP] -j DROP
+# sudo nft add rule inet filter input ip -s addr [IP] acept
+# sudo nft add rule inet output ip addr [IP] drop
+
+# sudo nft "add rule filter input tcp --dport {22, 80, 443} addr [IP]/24"
+# sudo nft add rule inet filter input icmp type echo-request drop
