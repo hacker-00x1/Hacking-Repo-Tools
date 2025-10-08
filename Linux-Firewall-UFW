@@ -1,0 +1,34 @@
+UFW stands for Uncomplicated Firewall. It’s a user-friendly interface for managing iptables, the powerful but complex firewall tool built into Linux systems.
+
+🛡 What UFW Does:
+
+UFW makes it easier to configure a host-based firewall by providing simple command-line options to:
+
+Allow or deny traffic on specific ports
+Limit access by IP address
+Set default policies
+Enable/disable the firewall
+Monitor firewall rules
+
+[+] Installation:
+# sudo apt install ufw / gufw
+
+[+] Usage:
+# sudo ufw -h 
+# sudo ufw status 
+# sudo ufw enable
+
+[+] Deny some specific traffic:
+# sudo ufw deny from [IP] 
+# sudo ufw deny from [IP]/24
+# sudo ufw deny in on eth0 from [IP]
+# sudo ufw allow "samba"
+
+[+] Allow some specific traffic:
+# ssudo ufw allow in on eth0 from [IP]
+# sudo ufw allow "OpenSSH"
+# sudo ufw allow "dns"
+# sudo ufw allow "aapache2"
+# sudo ufw allow "Nginx FULL"
+# sudo ufw app list 
+
