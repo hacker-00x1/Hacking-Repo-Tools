@@ -68,4 +68,22 @@
 
 # tracert [Domain]     => Display the route path between your computer to website
 
-# 
+# netsh [Interface] ipshow address \ findstr "IP Address"
+
+# netsh [Interface] ip show dnsservers
+
+# netsh adv firewall set allprofile state off/on
+
+# netstat -e -t 5
+
+# route print
+
+# route print add
+
+# route print delete [IP]
+
+# shutdown 
+
+# shutdown /r
+
+# shutdown /r /fw /f /t 0
