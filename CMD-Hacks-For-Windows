@@ -1,0 +1,71 @@
+[+] ===== 20 CMD Hacks For Windows =====
+
+# systemreset --factoryreset     => Reset or forward your PC
+
+# del /q/f/s %temp%\*     => Delete all temp Files to clear space
+
+# nslookup     => Resolving DNS into IP
+
+# ip config /all    => Know your PC IP and all net details
+
+# Ping ("ping ggoogle.com", "ping -t IP")     => Know the IP address of any website
+
+# attrib +h +S +r name of folder     => hide any folder
+
+# attrib -h -S -r name of folder     => unhide any folder
+
+# help (Show all cmd)
+
+# ipconfig /all/findtr DNS     => Search for any process
+
+# ipconfig /release or /renew "w+Fi"
+
+# ipconfig /flashdns     => Delete all DNS
+
+# nslookup -type = ptr [Domain]
+
+# getmac /V
+
+# powercfg /energy
+
+# powercfg /batteryreport
+
+# ckkdsk /f or r
+
+# sfc /scannow
+
+# DISM /online | cleanup /CheckHealth /scan ; Cleanp-Image /Restore
+
+# tasklist ; tasklist | findstr "process"
+
+# taskkill /f /PID [number]
+
+# netsh wlan show wlan report     => Show wireless connection
+
+# netsh [Interface] show interface
+
+# vmic product get name    => Show all intalled programs
+
+# driverquery    => Know about all installed drivers
+
+# systeminfo       => Show Information about your system
+
+# help color     => Change text color of command prompt
+
+# tree     => Displays directory path and files in each subdirectory 
+
+# /clip     => Copy the result of a Dos Command
+
+# ARP -A     => Show the ARP table
+
+# netstat -An/-af     => Show al connections
+
+# Ver     => Show windows version
+
+# cleanmgr     => Clean any drive of your PC
+
+# Title     => Change title of cmd windows
+
+# tracert [Domain]     => Display the route path between your computer to website
+
+# 
